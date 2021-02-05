@@ -11,7 +11,10 @@ class _AuthenticationState extends State<Authentication> {
   @override
   Widget build(BuildContext context) {
     return Material(
-       child: Container(),
+       child: Container(
+         width: MediaQuery.of(context).size.width,
+         height: MediaQuery.of(context).size.height,
+       ),
     );
   }
 }
