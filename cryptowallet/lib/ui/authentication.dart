@@ -8,13 +8,28 @@ class Authentication extends StatefulWidget {
 }
 
 class _AuthenticationState extends State<Authentication> {
+  TextEditingController _emailField = TextEditingController();
+  TextEditingController _passwordField = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    return Material(
-       child: Container(
-         width: MediaQuery.of(context).size.width,
-         height: MediaQuery.of(context).size.height,
-       ),
+    return Scaffold(
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        decoration: BoxDecoration(color: Colors.purpleAccent),
+        child: Column(
+          children: [
+            TextFormField(
+              controller: _emailField,
+            ),
+            TextFormField(
+              controller: _passwordField,
+            ),
+            Container(),
+            Container(),
+          ],
+        ),
+      ),
     );
   }
 }
