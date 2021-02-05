@@ -21,9 +21,16 @@ class _AuthenticationState extends State<Authentication> {
           children: [
             TextFormField(
               controller: _emailField,
+              decoration: InputDecoration(
+                hintText: "hello@email.com",
+                labelText: "Email",
+                labelStyle: TextStyle(color: Colors.white
+                ),
+              ),
             ),
             TextFormField(
               controller: _passwordField,
+              obscureText: true,
             ),
             Container(),
             Container(),
