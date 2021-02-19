@@ -10,8 +10,13 @@ class HomeView extends StatefulWidget {
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
-    return Material(
-       child: Text("Home View"),
+    return Scaffold(
+       body: Container(
+         decoration: BoxDecoration(color: Colors.white),
+         width: MediaQuery.of(context).size.width,
+         height: MediaQuery.of(context).size.height,
+         child: Text("Home page"),
+       )
     );
   }
 }
